@@ -1,0 +1,30 @@
+{
+  "name": "base-apparel-coming-soon-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run clean && parcel public/index.html --out-dir development -p 3000",
+    "build": "rimraf ./dist && parcel build public/*.html --out-dir dist --public-url ./",
+    "clean": "rimraf ./development && rimraf ./.cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ismail-Lh/base-apparel-coming-soon-master.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ismail-Lh/base-apparel-coming-soon-master/issues"
+  },
+  "homepage": "https://github.com/Ismail-Lh/base-apparel-coming-soon-master#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/runtime-corejs2": "^7.12.5",
+    "parcel-bundler": "^1.12.4",
+    "rimraf": "^3.0.2",
+    "sass": "^1.32.5"
+  }
+}

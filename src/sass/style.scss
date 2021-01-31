@@ -1,3 +1,125 @@
+$DesaturatedRed: hsl(0, 36%, 70%);
+$SoftRed: hsl(0, 93%, 68%);
+$LightRed: hsl(0, 80%, 86%);
+$DarkGrayish: hsl(0, 6%, 24%);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 body {
-  color: red;
+  font-size: 1.6rem;
+  font-weight: 400;
+  max-width: 1440px;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  overflow: hidden;
+}
+
+input,
+button {
+  outline: 0;
+}
+
+input::placeholder {
+  color: $DesaturatedRed;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  width: 100%;
+  height: 100%;
+
+  &__text,
+  &__img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    background-image: url('../images/bg-pattern-desktop.svg');
+    padding: 6.5rem 16rem;
+
+    h1 {
+      font-size: 5rem;
+      font-weight: 600;
+      color: $DarkGrayish;
+      margin: 13rem 0 4rem 0;
+      text-transform: uppercase;
+      letter-spacing: 2rem;
+      line-height: 1.2;
+
+      span {
+        display: block;
+        font-weight: 300;
+        color: $DesaturatedRed;
+      }
+    }
+
+    p {
+      color: $DesaturatedRed;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+
+  &__form {
+    position: relative;
+    margin-top: 5rem;
+    &-ipt {
+      width: 100%;
+      background: transparent;
+      border: 1px solid $DesaturatedRed;
+      border-radius: 3rem;
+      padding: 2rem 3rem;
+    }
+
+    &-btn {
+      border: 0;
+      background-image: linear-gradient(
+        135deg,
+        hsl(0, 80%, 86%),
+        hsl(0, 74%, 74%)
+      );
+      height: 5.7rem;
+      padding: 1.9rem 4.5rem;
+      border-radius: 3rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      transition: background-image 0.3s ease-in;
+
+      &:hover {
+        background-image: linear-gradient(
+          135deg,
+          hsl(0, 74%, 74%),
+          hsl(0, 80%, 86%)
+        );
+      }
+    }
+  }
+
+  &__img {
+    background-image: url('../images/hero-desktop.jpg');
+  }
 }

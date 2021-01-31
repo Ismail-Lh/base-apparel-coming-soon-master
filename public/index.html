@@ -14,6 +14,12 @@
 
     <link rel="stylesheet" href="../src/sass/style.scss" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Frontend Mentor | Base Apparel coming soon page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -28,18 +34,40 @@
     </style>
   </head>
   <body>
-    We're coming soon Hello fellow shoppers! We're currently building our new
-    fashion store. Add your email below to stay up-to-date with announcements
-    and our launch deals. Email Address
+    <section class="hero">
+      <div class="hero__text">
+        <img src="../src/images/logo.svg" alt="logo" class="logo" />
+        <h1><span>We're</span> coming soon</h1>
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
 
-    <footer>
+        <form class="hero__form">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="hero__form-ipt"
+            placeholder="Email Address"
+          />
+          <button type="submit" class="hero__form-btn">
+            <img src="../src/images/icon-arrow.svg" alt="icon-arrow" />
+          </button>
+        </form>
+      </div>
+      <div class="hero__img"></div>
+    </section>
+
+    <!-- <footer>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">Your Name Here</a>.
       </p>
-    </footer>
+    </footer> -->
 
     <script src="../src/app.js"></script>
   </body>

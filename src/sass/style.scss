@@ -21,13 +21,13 @@ body {
   font-weight: 400;
   max-width: 1440px;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: linear-gradient(
     135deg,
     hsl(0, 0%, 100%),
     hsl(0, 100%, 98%)
   );
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 input,
@@ -43,30 +43,59 @@ input::placeholder {
 }
 
 .hero {
+  background-image: url('../images/bg-pattern-desktop.svg');
   display: grid;
   grid-template-columns: 60% 40%;
+  grid-template-rows: 23rem 1fr;
   width: 100%;
   height: 100%;
 
+  @media (max-width: 375px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 85px 250px 1fr;
+  }
+
   &__text,
-  &__img {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  &__logo {
+    padding: 0 16rem;
+
+    @media (max-width: 375px) {
+      padding: 3rem;
+    }
+  }
+
+  &__logo {
+    padding-top: 6rem;
+
+    @media (max-width: 375px) {
+      padding-top: 3rem;
+    }
   }
 
   &__text {
-    background-image: url('../images/bg-pattern-desktop.svg');
-    padding: 6.5rem 16rem;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+
+    @media (max-width: 375px) {
+      grid-row: 3 / -1;
+      text-align: center;
+    }
 
     h1 {
       font-size: 5rem;
       font-weight: 600;
       color: $DarkGrayish;
-      margin: 13rem 0 4rem 0;
+      margin-bottom: 3rem;
       text-transform: uppercase;
       letter-spacing: 2rem;
       line-height: 1.2;
+
+      @media (max-width: 375px) {
+        margin: 5rem 0 3rem 0;
+        font-size: 3.5rem;
+        line-height: 1;
+        letter-spacing: 1.5rem;
+      }
 
       span {
         display: block;
@@ -85,6 +114,11 @@ input::placeholder {
   &__form {
     position: relative;
     margin-top: 5rem;
+
+    @media (max-width: 375px) {
+      margin-top: 3rem;
+    }
+
     &-ipt {
       width: 100%;
       background: transparent;
@@ -121,5 +155,14 @@ input::placeholder {
 
   &__img {
     background-image: url('../images/hero-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-row: 1 / -1;
+
+    @media (max-width: 375px) {
+      grid-row: 2 / 3;
+      background-position: center -55px;
+    }
   }
 }

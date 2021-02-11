@@ -47,18 +47,27 @@
           launch deals.
         </p>
 
-        <form class="hero__form">
+        <form class="hero__form" id="form">
           <input
-            type="email"
+            type="text"
             name="email"
             id="email"
             class="hero__form-ipt"
             placeholder="Email Address"
           />
+          <img
+            src="../src/images/icon-error.svg"
+            alt="icon-error"
+            class="error-icon"
+            id="error-icon"
+          />
           <button type="submit" class="hero__form-btn">
             <img src="../src/images/icon-arrow.svg" alt="icon-arrow" />
           </button>
         </form>
+        <small class="error-msg" id="error-text"
+          >Please provide a valide email!</small
+        >
       </div>
       <div class="hero__img"></div>
     </section>
